@@ -9,7 +9,7 @@ request.get(url, (error, response, body) => {
     return;
   }
   const jsonData = JSON.parse(body);
-  const characters = jsonData.character;
+  const characters = jsonData.characters;
   for (const character of characters) {
     request(character, (error, response, body) => {
       if (error) {
