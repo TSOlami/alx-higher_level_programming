@@ -9,6 +9,7 @@ class Square(Rectangle):
     """
         Square implements rectangle
     """
+
     def __init__(self, size, x=0, y=0, id=None):
         """
             initialises Square (overrides Rectangle init)
@@ -27,7 +28,7 @@ class Square(Rectangle):
         """
             sets the value of size
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -37,7 +38,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-            
+
         """
         if len(args) == 0:
             for key, val in kwargs.items():
@@ -62,7 +63,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """
-            Returns the dictionary 
+            Returns the dictionary
         """
         return {'id': getattr(self, "id"),
                 'size': getattr(self, "width"),

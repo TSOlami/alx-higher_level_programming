@@ -9,6 +9,7 @@ class Rectangle(Base):
     """
         class Rectangle implements Base.
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
             Initialize
@@ -111,7 +112,7 @@ class Rectangle(Base):
         print("\n" * self.y, end="")
 
         for i in range(self.height):
-            rectangle += (" " * self.x) + (print_symbol*self.width) + "\n"
+            rectangle += (" " * self.x) + (print_symbol * self.width) + "\n"
         print(rectangle, end="")
 
     def __str__(self):
