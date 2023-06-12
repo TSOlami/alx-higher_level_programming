@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+"""
+Base Model
+"""
 import json
 import csv
 import turtle
-"""Base Model"""
 
 
 class Base:
